@@ -1,19 +1,3 @@
-#!/usr/bin/env bash
-
-# Runs all the code generators.
-# If the node structure was changed, run_metamodel_generator.sh first!
-
-# Remember current directory
-pushd javaparser-core-generators
-
-# Generate code
-mvn -B clean package -P run-generators -DskipTests
-
-# Go back to previous directory
-popd
-
-# Fresh code has been generated in core, so rebuild the whole thing again.
-mvn -B clean install -DskipTests
-if [ "$?" -ne 0 ]; then
-    exit 1
-fi
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad4bc59b5d5c02372c1412c83263a727302a8b03a5ccb7863b473748078cf5ad
+size 440
